@@ -1,0 +1,33 @@
+.aboutContainer {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  align-items: center;
+  justify-content: center;
+}
+.aboutCard {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+.aboutRole {
+  position: relative;
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-normal);
+  padding-left: 5.4rem;
+  margin-bottom: var(--mb-1);
+}
+.aboutRole::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 1px;
+  top: 1rem;
+  left: 0;
+  background-color: var(--text-color);
+}
+@media screen and (max-width: 768px) {
+  .aboutContainer {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+}
