@@ -6,7 +6,15 @@ import React, { useRef, useEffect, useCallback, useState, type ReactNode, Suspen
 import { gsap } from "gsap";
 import logo from "../../../assets/img/logo_sgu.png"
 import "./MagicBento.css";
-import Profile from "./Profile";
+import Profile from "../../Profile/Profile";
+import ModelViewer from "../../model3d/ModelViewer";
+import logo3dv3 from "../../../assets/glb/logo3d_dark.glb"
+import LogoLoop from "../LogoLoop/LogoLoop";
+import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiJavascript } from 'react-icons/si';
+import { TbBrandCSharp } from "react-icons/tb";
+import { FaJava } from "react-icons/fa";
+import Carousel from "../Carousel/Carousel";
+
 export interface BentoCardProps {
   color?: string;
   title?: string;
@@ -30,7 +38,18 @@ export interface BentoProps {
   clickEffect?: boolean;
   enableMagnetism?: boolean;
 }
-
+const techLogos = [
+  { node: <SiReact />, title: "React", href: "https://react.dev" },
+  { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
+  { node: <SiTypescript />, title: "TypeScript", href: "https://www.typescriptlang.org" },
+  { node: <SiTailwindcss />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
+];
+const languagesLogos = [
+  { node: <FaJava />, title: "React", href: "https://react.dev" },
+  { node: <TbBrandCSharp />, title: "Next.js", href: "https://nextjs.org" },
+  { node: <SiTypescript />, title: "TypeScript", href: "https://www.typescriptlang.org" },
+  { node: <SiJavascript />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
+];
 const DEFAULT_PARTICLE_COUNT = 12;
 const DEFAULT_SPOTLIGHT_RADIUS = 300;
 const DEFAULT_GLOW_COLOR = "132, 0, 255";
@@ -40,12 +59,13 @@ const cardData: BentoCardProps[] = [
   {
     color: "var(--body-color)",
     title: "SaiGon University",
-    description: "Software Engineer",
+    description: "Software Engineering",
     label: "Education",
-    content: <img className="img" src={logo}/>,
+    content: <img className="card__content-img" src={logo}/>,
   },
   {
-    color: "var(--body-color)"
+    color:  "var(--body-color)",
+    content: <ModelViewer modelUrl={logo3dv3}/>
   },
   {
     color: "var(--body-color)",
@@ -59,18 +79,54 @@ const cardData: BentoCardProps[] = [
     title: "Automation",
     description: "Streamline workflows",
     label: "Project",
+    content: <div style={{ height: '250px', position: 'relative', justifySelf : 'center' }}>
+      <Carousel
+        baseWidth={300}
+        autoplay={true}
+        autoplayDelay={6000} /* ms */
+        pauseOnHover={true}
+        loop={true}
+        round={false}
+      />
+</div>
   },
   {
     color: "var(--body-color)",
     title: "Integration",
     description: "Connect favorite tools",
     label: "Languages",
+    content: <div style={{ height: '100px', position: 'relative', overflow: 'hidden'}}>
+      <LogoLoop
+        logos={languagesLogos}
+        speed={60}
+        direction="left"
+        logoHeight={25}
+        gap={30}
+        pauseOnHover
+        scaleOnHover
+        fadeOut
+        ariaLabel="Technology partners"
+      />
+    </div>
   },
   {
     color: "var(--body-color)",
     title: "Security",  
     description: "Enterprise-grade protection",
     label: "Technologies",
+    content: <div style={{ height: '100px', position: 'relative', overflow: 'hidden'}}>
+      <LogoLoop
+        logos={techLogos}
+        speed={60}
+        direction="left"
+        logoHeight={25}
+        gap={30}
+        pauseOnHover
+        scaleOnHover
+        fadeOut
+        ariaLabel="Technology partners"
+      />
+    </div>
   },
 ];
 
@@ -613,7 +669,7 @@ const MagicBento: React.FC<BentoProps> = ({
                   <div className="card__label">{card.label}</div>
                 </div>
                 <div className="card__content">
-                  <div className="card__subcontent"></div>
+                  <div className="card__subcontent">{card.content}</div>
                   <h2 className="card__title">{card.title}</h2>
                   <p className="card__description">{card.description}</p>
                 </div>
