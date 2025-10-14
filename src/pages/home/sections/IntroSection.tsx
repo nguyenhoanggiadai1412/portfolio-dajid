@@ -22,12 +22,12 @@ function IntroSection() {
             </h1>
             <h3 className={styles.aboutRole}>
               <GradientText 
-              colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
-              animationSpeed={3}
-              className="custom-class"
-              showBorder={true}>
-              Fullstack Developer  
-            </GradientText>
+                colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                animationSpeed={3}
+                className="custom-class"
+                showBorder={true}>
+                Fullstack Developer  
+              </GradientText>
             </h3>
             <TextType 
               text={["Hi, I’m a developer passionate about creating efficient and user-friendly applications. Always eager to learn and improve, I strive to build high-quality software solutions."]}

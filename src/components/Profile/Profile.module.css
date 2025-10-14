@@ -1,0 +1,63 @@
+.profileContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: var(--body-color);
+  height: 250px;
+  margin: 0px auto;
+  overflow: visible; /* cho phép ảnh tràn ra ngoài */
+}
+
+.info {
+  flex: 1;
+  z-index: 1;
+  width: 300px;
+  height: auto;
+  text-align: left;
+}
+
+.infoTitle {
+  font-size: 1rem;
+  padding: 0 20px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+.infoFullname {
+  text-align: center;
+}
+.infoDob {
+  font-size:var(--smaller-font-size);
+  text-align: center;
+}
+.infoMetrics, .infoHobbies {
+  width: 100%;
+  text-align: center;
+}
+.infoMetrics ul li, .infoHobbies ul li{
+  display:inline-block;
+  padding-right: 20px;
+  font-size: var(--normal-font-size);
+}
+.infoHobbies ul {
+  justify-self: center;
+}
+.character {
+  position: absolute;
+  right: -40px; /* cho nhân vật tràn ra khỏi khung */
+  bottom: -20px;
+  z-index: 2;
+}
+
+.character img {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
+}
+
+/* Hiệu ứng nổi nhẹ */
+.character img:hover {
+  transform: translateY(-8px);
+}

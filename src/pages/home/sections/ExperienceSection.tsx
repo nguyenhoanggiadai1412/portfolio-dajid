@@ -1,13 +1,10 @@
+import ElectricBorder from "../../../components/Reactbits/ElectricBorder/ElectricBorder"
+
 function ExperienceSection() {
     return (
-        <section className="section">
-            <h2>
-                Experience
-            </h2>
-            <div className="container">
-                
-            </div>
-        </section>
+      <section >
+        
+      </section>
     )
 }
 
