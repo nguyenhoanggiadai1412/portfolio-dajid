@@ -78,7 +78,7 @@ const cardData: BentoCardProps[] = [
     color: "var(--body-color)",
     title: "Automation",
     description: "Streamline workflows",
-    label: "Project",
+    label: "Experience",
     content: <div style={{ height: '250px', position: 'relative', justifySelf : 'center' }}>
       <Carousel
         baseWidth={300}

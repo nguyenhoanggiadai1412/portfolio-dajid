@@ -10,6 +10,11 @@ function App() {
   const handleClickMenuItem = (index: number) => {
     setIsItemSelected(index);
   }
+  if (window.location.search) {
+    const url = new URL(window.location.href);
+    url.searchParams.delete("fbclid");
+    window.history.replaceState({}, document.title, url.toString());
+  }
   return (
     <div style={{ position: 'relative', minHeight: '100vh', overflow: 'hidden' }}>
       <div style={{

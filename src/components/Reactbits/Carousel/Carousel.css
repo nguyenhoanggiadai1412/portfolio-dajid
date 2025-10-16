@@ -77,14 +77,14 @@
 
 .carousel-icon-container {
   display: flex;
-  height: 28px;
-  width: 28px;
+  height: 18px;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  background-color: #fff;
 }
-
+.carousel-icon-container img{
+  height: 24px;
+  width: auto;
+}
 .carousel-icon {
   height: 16px;
   width: 16px;

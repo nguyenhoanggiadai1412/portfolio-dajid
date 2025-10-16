@@ -4,14 +4,8 @@
 
 import { useEffect, useState, useRef } from "react";
 import { motion, PanInfo, useMotionValue, useTransform } from "motion/react";
-// replace icons with your own if needed
-import {
-  FiCircle,
-  FiCode,
-  FiFileText,
-  FiLayers,
-  FiLayout,
-} from "react-icons/fi";
+import fujinet from "../../../assets/img/logo-fujinet.png"; 
+import cybersoft from "../../../assets/img/logo-cybersoft.png"; 
 import "./Carousel.css";
 
 export interface CarouselItem {
@@ -33,34 +27,16 @@ export interface CarouselProps {
 
 const DEFAULT_ITEMS: CarouselItem[] = [
   {
-    title: "Text Animations",
+    title: "Frontend Developer",
     description: "Cool text animations for your projects.",
     id: 1,
-    icon: <FiFileText className="carousel-icon" />,
+    icon: <img src={fujinet} alt="" />,
   },
   {
-    title: "Animations",
+    title: "WordPress Developer",
     description: "Smooth animations for your projects.",
     id: 2,
-    icon: <FiCircle className="carousel-icon" />,
-  },
-  {
-    title: "Components",
-    description: "Reusable components for your projects.",
-    id: 3,
-    icon: <FiLayers className="carousel-icon" />,
-  },
-  {
-    title: "Backgrounds",
-    description: "Beautiful backgrounds and patterns for your projects.",
-    id: 4,
-    icon: <FiLayout className="carousel-icon" />,
-  },
-  {
-    title: "Common UI",
-    description: "Common UI components are coming soon!",
-    id: 5,
-    icon: <FiCode className="carousel-icon" />,
+    icon: <img src={cybersoft} alt="" />,
   },
 ];
 
