@@ -4,6 +4,7 @@ import Header from './components/header/Header'
 import Home from './pages/home/Home'
 import Particles from './components/Reactbits/Particles/Particles'
 import { useState } from 'react'
+import SplashCursor from './components/Reactbits/SplashCursor/SplashCursor'
 
 function App() {
   const [isItemSelected, setIsItemSelected] = useState(0);
@@ -17,6 +18,7 @@ function App() {
   }
   return (
     <div style={{ position: 'relative', minHeight: '100vh', overflow: 'hidden' }}>
+      <SplashCursor></SplashCursor>
       <div style={{
         position: 'absolute',
         inset: 0,
