@@ -25,7 +25,7 @@ function Model({ modelUrl }: { modelUrl: string }) {
 
     // 🔹 Scale tự động để model không quá to hoặc quá nhỏ
     const maxDim = Math.max(size.x, size.y, size.z);
-    const scale = 2 / maxDim; // model sẽ nằm gọn trong khung
+    const scale = 3 / maxDim; // model sẽ nằm gọn trong khung
     scene.scale.setScalar(scale);
   }, [scene]);
 
@@ -36,7 +36,7 @@ export default function ModelViewer({ modelUrl }: ModelViewerProps) {
   return (
     <Canvas camera={{ position: [0, 1, 5], fov: 50 }}>
       {/* Ánh sáng */}
-      <ambientLight intensity={0.8} />
+      <ambientLight intensity={0.2} />
       <directionalLight position={[2, 4, 5]} intensity={1} />
 
       {/* Suspense để chờ model load */}

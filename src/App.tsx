@@ -18,7 +18,7 @@ function App() {
   }
   return (
     <div style={{ position: 'relative', minHeight: '100vh', overflow: 'hidden' }}>
-      <SplashCursor></SplashCursor>
+      {/* <SplashCursor></SplashCursor> */}
       <div style={{
         position: 'absolute',
         inset: 0,

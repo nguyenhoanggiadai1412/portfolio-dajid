@@ -10,7 +10,7 @@ import Profile from "../../Profile/Profile";
 import ModelViewer from "../../model3d/ModelViewer";
 import logo3dv3 from "../../../assets/glb/logo3d_dark.glb"
 import LogoLoop from "../LogoLoop/LogoLoop";
-import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiJavascript } from 'react-icons/si';
+import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiJavascript, SiSpring, SiDotnet, SiPostgresql, SiMysql } from 'react-icons/si';
 import { TbBrandCSharp } from "react-icons/tb";
 import { FaJava } from "react-icons/fa";
 import Carousel from "../Carousel/Carousel";
@@ -40,9 +40,11 @@ export interface BentoProps {
 }
 const techLogos = [
   { node: <SiReact />, title: "React", href: "https://react.dev" },
-  { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
-  { node: <SiTypescript />, title: "TypeScript", href: "https://www.typescriptlang.org" },
+  { node: <SiSpring />, title: "Spring", href: "https://www.typescriptlang.org" },
   { node: <SiTailwindcss />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
+  { node: <SiDotnet />, title: "Dot Net", href: "#" },
+  { node: <SiPostgresql />, title: "PostgreSql", href: "https://postgresql.org" },
+  { node:  <SiMysql />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
 ];
 const languagesLogos = [
   { node: <FaJava />, title: "React", href: "https://react.dev" },
@@ -82,7 +84,7 @@ const cardData: BentoCardProps[] = [
     content: <div style={{ height: '250px', position: 'relative', justifySelf : 'center' }}>
       <Carousel
         baseWidth={300}
-        autoplay={true}
+        autoplay={false}
         autoplayDelay={6000} /* ms */
         pauseOnHover={true}
         loop={true}
