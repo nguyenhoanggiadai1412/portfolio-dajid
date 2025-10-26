@@ -10,7 +10,8 @@ function ContactSection() {
           >
             404
           </FuzzyText> */}
-          <MotionButton ></MotionButton>
+          <MotionButton frontText="Hello" 
+          backText="Welcome"></MotionButton>
       </section>
     )
 }
