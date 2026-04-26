@@ -11,6 +11,7 @@ interface GradientTextProps {
   colors?: string[];
   animationSpeed?: number;
   showBorder?: boolean;
+  fontSize?: string;
 }
 
 export default function GradientText({
@@ -19,10 +20,12 @@ export default function GradientText({
   colors = ["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"],
   animationSpeed = 8,
   showBorder = false,
+  fontSize = "1.5rem"
 }: GradientTextProps) {
   const gradientStyle = {
     backgroundImage: `linear-gradient(to right, ${colors.join(", ")})`,
     animationDuration: `${animationSpeed}s`,
+    fontSize: fontSize
   };
 
   return (

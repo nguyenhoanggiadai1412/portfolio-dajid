@@ -5,4 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   assetsInclude: ["**/*.glb"],
+   define: {
+    global: 'globalThis', // 👈 fix lỗi "global is not defined"
+  },
 })
