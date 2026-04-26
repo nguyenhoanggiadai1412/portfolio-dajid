@@ -5,7 +5,8 @@
 import { useEffect, useState, useRef } from "react";
 import { motion, PanInfo, useMotionValue, useTransform } from "motion/react";
 import fujinet from "../../../assets/img/logo-fujinet.png"; 
-import cybersoft from "../../../assets/img/logo-cybersoft.png"; 
+import cybersoft from "../../../assets/img/logo-cybersoft.png";
+import techword from "../../../assets/img/logo-techworld.png"; 
 import "./Carousel.css";
 
 export interface CarouselItem {
@@ -37,6 +38,12 @@ const DEFAULT_ITEMS: CarouselItem[] = [
     description: "Smooth animations for your projects.",
     id: 2,
     icon: <img src={cybersoft} alt="" />,
+  },
+  {
+    title: "Fullstack Developer",
+    description: "Smooth animations for your projects.",
+    id: 3,
+    icon: <img src={techword} alt="" />,
   },
 ];
 
